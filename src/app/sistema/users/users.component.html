@@ -1,0 +1,57 @@
+<div class="titular">
+  <h2>Usuarios</h2>
+</div>
+<div class="laterales">
+      <div class="row">
+    <div class="col-sm-8">
+    <div class="box-header">lista</div>
+      <div class="lista" *ngFor="let item of listusers | async">
+    <div class="col-sm-10">{{item.email}}, {{item.name}} {{item.status}}</div>
+    <div class="col-sm-2">     <a href=""><i class="material-icons" style="font-size:16px !important;">contact_mail</i></a>
+        <a href=""> <i class="material-icons" style="font-size:16px !important;">chat_bubble</i></a>
+        <a href=""><i class="material-icons" style="font-size:16px !important;">trending_up</i></a>
+        <a (click)="removeItemFromList(item.$key);"><i class="material-icons" style="font-size:16px !important;">clear</i></a></div>
+    </div>
+    </div>
+    <div class="col-sm-4">
+    <div class="box-header">New User</div>
+    <!--div class="box-body">
+    <div class="row">
+
+        <div class="col-sm-12">
+          
+          <md-input-container>
+          <input  type="text" mdInput placeholder="Name" [(ngModel)]="username" name="username" value="username">
+        </md-input-container>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <md-input-container>
+          <input type="text" mdInput placeholder="Email" [(ngModel)]="useremail" name="useremail" value="useremail">
+        </md-input-container>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <md-input-container>
+          <input type="text" mdInput placeholder="Code" [(ngModel)]="usercode" name="usercode" value="usercode">
+        </md-input-container>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <md-input-container>
+          <input type="text" mdInput placeholder="Group" [(ngModel)]="usergruppe" name="usergruppe" value="usergruppe">
+        </md-input-container>
+        </div>
+      </div>
+        <div class="row">
+          <div class="col-sm-12"><button (click)="AddUser()">Add User</button></div>
+        </div>
+    </div-->
+
+
+    </div>
+    </div>
+</div>

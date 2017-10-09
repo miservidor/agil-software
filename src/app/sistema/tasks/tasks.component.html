@@ -1,0 +1,103 @@
+<div class="titular">
+  <div class="row">
+    <div class="col-sm-3"> <h2>Tasks </h2></div>
+    <div class="col-sm-6">  <select placeholder="Choose Project" [(ngModel)]="projecttask">
+   <option *ngFor="let state of listprojects | async"  [value]="state.codpro" >{{ state.namepro }}</option>
+  </select></div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+    <div class="lista" *ngFor="let task of listtasks | async">
+      <div class="col-50"> {{task.projecttask}} {{task.nametask}} {{task.statustask}}</div>
+      <div class="col-50"></div>
+    </div>
+    </div>
+    <div class="col-sm-6">
+          <div class="form-group">
+            <label for="codtask">Codigo</label>
+            <input type="text" class="form-control" id="codtask" [(ngModel)]="codtask" name="codtask" placeholder="Codigo" aria-describedby="sizing-addon1">
+          </div>
+          <div class="form-group">
+            <label for="projecttask">Proyecto</label>
+            <input type="text" class="form-control" id="projecttask" [(ngModel)]="projecttask" name="projecttask" placeholder="projecttask" aria-describedby="sizing-addon1">
+          </div>
+          <div class="form-group">
+            <label for="nametask">Nombre</label>
+            <input type="text" class="form-control" id="nametask" [(ngModel)]="nametask" name="nametask" placeholder="Nombre Tarea" aria-describedby="sizing-addon1">
+          </div>
+          <div class="form-group">
+            <label for="desctask">Descripcion</label>
+            <input type="text" class="form-control" id="desctask" [(ngModel)]="desctask" name="desctask" placeholder="Descripcion" aria-describedby="sizing-addon1">
+          </div>
+          <div class="form-group">
+            <label for="dstarttask">Fecha Comienzo</label>
+            <input type="date" class="form-control" id="dstarttask" [(ngModel)]="dstarttask" name="dstarttask" placeholder="" aria-describedby="sizing-addon1">
+          </div>
+
+          <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+            <label for="hstarttask">Hora Inicio</label>
+            <input type="text" class="form-control" id="hstarttask" [(ngModel)]="hstarttask" name="hstarttask" placeholder="hh:mm" aria-describedby="sizing-addon1">
+          </div>
+            </div>
+            <div class="col-sm-6">
+
+                      <div class="form-group">
+                      <label for="hendtask">Hora Termino</label>
+                      <input type="text" class="form-control" id="hendtask" [(ngModel)]="hendtask" name="hendtask" placeholder="hh:mm" aria-describedby="sizing-addon1">
+                    </div>
+
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="dendtask">Fecha Termino</label>
+            <input type="date" class="form-control" id="dendtask" [(ngModel)]="dendtask" name="dendtask" placeholder="" aria-describedby="sizing-addon1">
+          </div>
+          <div class="form-group">
+            <label for="colortask">colortask</label>
+            <input type="color" class="form-control" id="colortask" [(ngModel)]="colortask" name="colortask" aria-describedby="sizing-addon1">
+          </div>
+
+  
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="usersinak">
+                  <div class="usr" *ngFor="let user of usuarios"  (click)="user.active=true;">
+                    <span *ngIf="!user.active">{{user.usrname}} </span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-2 middle"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> </div>
+              <div class="col-sm-4">
+                <div class="usersinak">
+                  <div class="usr" *ngFor="let user of usuarios"  (click)="user.active=false;">
+                    <span *ngIf="user.active">{{user.usrname}} </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+             <div class="form-group">
+            <label for="statustask">Estado Tarea</label>
+            <input type="text" class="form-control" id="statustask" [(ngModel)]="statustask" name="statustask" placeholder="statustask" aria-describedby="sizing-addon1">
+          </div>
+
+          <div class="form-group">
+            <label for="clientetask">clientetask</label>
+            <input type="text" class="form-control" id="clientetask" [(ngModel)]="clientetask" name="clientetask" placeholder="clientetask" aria-describedby="sizing-addon1">
+          </div>
+
+              <div class="row">
+      <div class="col-sm-6"></div>
+      <div class="col-sm-6"><button (click)="AddTask()" md-raised-button>Add Task</button></div>
+    </div>
+
+</div>
+
+          
+  </div>
+</div>

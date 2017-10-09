@@ -1,0 +1,12 @@
+.formpadding{
+    padding: 5px;
+}
+.butlogin{
+    border-radius: 5px;
+    background: #009688;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 120px;
+}

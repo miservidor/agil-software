@@ -1,0 +1,98 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="name" name="name" placeholder="Nombre" aria-describedby="sizing-addon1">
+          </div>
+          <div class="form-group">
+            <label for="name">Empresa</label>
+            <input type="text" class="form-control" [(ngModel)]="company" name="empresa" id="empresa" placeholder="Empresa" aria-describedby="sizing-addon1">
+          </div>
+          <div class="form-group">
+            <label for="name">e-mail</label>
+            <input type="text" class="form-control" [(ngModel)]="email" name="email" id="email" placeholder="email" aria-describedby="sizing-addon1">
+          </div>
+          <div class="form-group">
+            <label for="pass">Password</label>
+            <input type="password" class="form-control" [(ngModel)]="password" name="password" id="password" aria-describedby="sizing-addon1">
+          </div>
+          <div class="row">
+            <div class="col-sm-12" style="padding-bottom:20px;"><strong>Tipo de Usuario</strong>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6"><label class="radio-inline">
+              <input type="radio" name="typeuser" [(ngModel)]="typeuser" id="inlineRadio1" value="creator"> <strong>Administrador / Creador</strong>
+              <br>Crear un nuevo entorno.
+            </label>
+</div>
+            <div class="col-sm-6">
+              <label class="radio-inline">
+                <input type="radio" name="typeuser" [(ngModel)]="typeuser" id="inlineRadio2" value="user"> <strong>Usuario</strong>
+                <br> Crear un usuario para participar de un proyecto ya creado.
+                (Recomendamos descargar version App Android.)
+              </label>
+            </div>
+          </div>
+          <hr>
+           <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-default" (click)="registraremail()">Inscribirse</button>
+            </div>
+          </div>
+    </div>
+        <div class="col-sm-offset-6"></div>
+    
+  </div>
+</div>
+
+
+
+<!--div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8">
+                <hr>
+         <md-input-container>
+    <input mdInput placeholder="Name"  type="text"  [(ngModel)]="name" name="name" value="">
+  </md-input-container>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+         <md-input-container>
+            <input mdInput placeholder="Email"  type="text"  [(ngModel)]="email" name="email" value="">
+        </md-input-container>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+          <md-input-container>
+            <input mdInput placeholder="Password"  type="password"  [(ngModel)]="password" name="password" value="">
+        </md-input-container>                     
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+         <md-input-container>
+            <input mdInput placeholder="Company/Organization"  type="text"  [(ngModel)]="company" name="company" value="">
+        </md-input-container>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <p>Tipo de Cuenta</p>
+            <md-radio-group [(ngModel)]="typeuser">
+                <md-radio-button value="creator">Administrador (crear projecto)</md-radio-button>
+                <md-radio-button value="user">Usuario</md-radio-button>
+            </md-radio-group>
+            <hr>
+            </div>
+        </div>
+                <div class="row">
+            <div class="col-sm-8">
+        <button (click)="registraremail()" color="secondary" md-button>Sign Up Email</button>
+            </div>
+        </div>
+    </div-->

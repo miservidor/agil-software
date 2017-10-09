@@ -1,0 +1,71 @@
+<div class="titular"><h2>Projects</h2></div>
+
+
+
+
+      <!--md-nav-list>
+        <md-list-item *ngFor="let item of listprojects | async">
+          <span md-line>{{item.codpro}} {{item.namepro}} {{item.$key}}</span>
+
+          <button md-icon-button (click)="removeItemFromList(item.$key);">
+              <md-icon>x</md-icon>
+          </button>
+        </md-list-item>
+      </md-nav-list-->
+<div class="container">
+    <div class="row">
+    <div class="col-sm-6">
+          <div class="lista" *ngFor="let item of listprojects | async | byuser:usuario ">
+          <div class="col-90">{{item.codpro}} {{item.namepro}} </div>
+          <div class="col-10"> <div (click)="removeproject(item.$key)"><i class="material-icons" style="font-size:16px !important;">clear</i></div></div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+              <div class="form-group">
+              <label for="codpro">Codigo</label>
+              <input type="text" class="form-control" id="codpro" [(ngModel)]="codpro" name="codpro" placeholder="codpro" aria-describedby="sizing-addon1">
+            </div>
+
+            <div class="form-group">
+              <label for="namepro">Nombre</label>
+              <input type="text" class="form-control" id="namepro" [(ngModel)]="namepro" name="namepro" placeholder="namepro" aria-describedby="sizing-addon1">
+            </div>
+            <div class="form-group">
+              <label for="descpro">Descripcion</label>
+              <input type="text" class="form-control" id="descpro" [(ngModel)]="descpro" name="descpro" placeholder="descpro" aria-describedby="sizing-addon1">
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="startpro">Fecha Comienzo</label>
+                  <input type="date" class="form-control" id="startpro" [(ngModel)]="startpro" name="startpro" placeholder="startpro" aria-describedby="sizing-addon1">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="endpro">Fecha Fin</label>
+                  <input type="date" class="form-control" id="endpro" [(ngModel)]="endpro" name="endpro" placeholder="endpro" aria-describedby="sizing-addon1">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="usersinak">
+                  <div class="usr" *ngFor="let user of usuarios"  (click)="user.active=true;">
+                    <span *ngIf="!user.active">{{user.usrname}} </span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-2 middle"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> </div>
+              <div class="col-sm-4">
+                <div class="usersinak">
+                  <div class="usr" *ngFor="let user of usuarios"  (click)="user.active=false;">
+                    <span *ngIf="user.active">{{user.usrname}} </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+  <button type="" (click)="AddProject()">Add Project</button></div>
+  </div>
+</div>

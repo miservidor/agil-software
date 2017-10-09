@@ -1,0 +1,31 @@
+  <div class="container-menu">
+    <div class="row">
+      <div class="col-xs-4">
+        <div class="gridado">
+          <img src="./assets/logoc.png" style="width: 8.0625rem; margin: 10px;" alt="">
+          <div class="tit-logo">AGIL</div>
+        </div>
+        
+      </div>
+      <div class="col-xs-8">
+        <div class="row menuoff hidden-xs">
+          <div class="col-sm-3 butsup"  scrollTo scrollTargetSelector="#agil">AGIL</div>
+          <div class="col-sm-3 butsup" scrollTo scrollTargetSelector="#como-funciona">COMO FUNCIONA</div>
+          <div class="col-sm-3 butsup" scrollTo scrollTargetSelector="#registro">REGISTRARSE</div>
+          <div class="col-sm-3 butsup" (click)="loginmod=!loginmod;">CONECTARSE</div>
+        </div>
+        <div class="hidden-sm hidden-md hidden-lg iconright"><i class="material-icons">menu</i></div>
+      </div>
+      <div class="popup" *ngIf="loginmod">
+          <app-login (notify)='onNotify($event)'></app-login>   
+      </div>
+    </div>
+    <div class="row">
+      <div class="hidden-sm hidden-md hidden-lg menu-xs">
+          <div class="col-sm-12 butsup"  scrollTo scrollTargetSelector="#agil">AGIL</div>
+          <div class="col-sm-12 butsup" scrollTo scrollTargetSelector="#como-funciona">COMO FUNCIONA</div>
+          <div class="col-sm-12 butsup" scrollTo scrollTargetSelector="#registro">REGISTRARSE</div>
+          <div class="col-sm-12 butsup" (click)="loginmod=!loginmod;">CONECTARSE</div>
+      </div>
+    </div>
+  </div>

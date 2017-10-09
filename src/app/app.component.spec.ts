@@ -1,12 +1,22 @@
 import { TestBed, async } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
+import { IndexComponent } from './index/index.component';
+import { MainComponent } from './index/main/main.component';
+import { FooterComponent } from './index/footer/footer.component';
+import { MenusupComponent } from './index/menusup/menusup.component';
+import { LoginComponent } from './index/login/login.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+      AppComponent,
+      IndexComponent,
+      MainComponent,
+      FooterComponent,
+      MenusupComponent,
+      LoginComponent
       ],
     }).compileComponents();
   }));

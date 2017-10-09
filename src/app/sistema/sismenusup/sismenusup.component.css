@@ -1,0 +1,60 @@
+.menubox{
+    background: #009688;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    box-shadow: #777 2px 2px 2px;
+    z-index: 9999;
+
+}
+.img-circle {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+.box-user{
+    width: 180px;
+    margin-left: 10px;
+    display: flex;
+}
+.box-user-foto{
+    width: 60px;
+}
+.box-user-txt{
+    width: 120px;
+}
+.material-icons{
+    font-size: 40px;
+}
+.right{
+    text-align: right;
+    padding-right:10px;
+    border-right: solid white 1px; 
+}
+input{
+color: black;
+}
+.pass{
+    width:40px;
+}
+.butsup{
+background: greenyellow;
+padding: 5px;
+width: 120px;
+border-radius: 5px 5px 5px 5px;
+text-align: center;
+color: #666;
+}
+.usermenu{
+    width: 200px;
+    height: 100px;
+    top: 70px;
+    z-index: 9999;
+    right: 20px;
+    position: absolute;
+    background: white;
+    font-size: 12px;
+    padding: 15px;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 5px;
+}

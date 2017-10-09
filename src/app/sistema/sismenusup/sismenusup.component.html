@@ -1,0 +1,48 @@
+<div class="menubox lista"> 
+    <div class="col-sm-4">AGIL Software
+    </div>
+    <div class="col-sm-4">
+        <div  *ngIf="!(user | async)?.uid" class="box-loggin">
+            <div class="row">
+                <div class="col-sm-4"><input type="text" [(ngModel)]="email" name="email" value="email" placeholder="usuario"></div>
+                <div class="col-sm-4"><input type="password" style="width:80px;" [(ngModel)]="password" name="password" value="password" placeholder="clave"></div>
+                <div class="col-sm-4"><div (click)="loginemail()" class="butsup">Login</div></div>
+            </div>
+           
+        </div>
+    </div>
+    <div class="col-sm-4 right">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-8 ">
+                <div *ngIf="(user | async)?.uid" class="box-user" style="float:right">
+
+                    <div class="box-user-txt">
+                        <span style="font-size:14px; color:greenyellow;">{{(dato | async)?.nombreuser}}</span>
+                        <span style="font-size:10px;">{{(dato | async)?.rol}}</span>
+                    </div>
+                    <div *ngIf="(dato | async)?.foto" class="box-user-foto" (click)="usermenu=!usermenu">
+                        <img class="img-circle" src="{{(dato | async)?.foto}}">
+                    </div>
+                    <div *ngIf="!(dato | async)?.foto" class="box-user-foto" (click)="usermenu=!usermenu">
+                        <img class="img-circle" src="./assets/user.png">
+                    </div>
+                </div>
+            </div>
+            <!--div *ngIf="(user | async)?.uid" class="col-sm-4">
+                <a routerLink="/useredit" routerLinkActive="active" (click)="loaduser();">
+                <i class="material-icons" style="color:greenyellow;padding-left:10px;">settings</i></a>
+                <a (click)="logout()"><i class="material-icons" style="color:greenyellow;padding-left:10px;">settings_power</i></a>
+            </div-->
+        </div>
+    </div>
+<div *ngIf="usermenu" class="usermenu">
+    <div class="row">
+        <div class="col-xs-12"><a routerLink="/useredit" routerLinkActive="active">settings</a></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12"> <a (click)="logout()">logout</a></div>
+    </div>
+</div>
+
+</div>

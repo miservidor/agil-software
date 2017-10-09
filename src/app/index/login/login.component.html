@@ -1,0 +1,16 @@
+        <div class="box-loggin">
+            <div class="row">
+                <div class="col-sm-12"><i class="material-icons" (click)="onClick()" style="float: right;">clear</i></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 formpadding"><input type="text" [(ngModel)]="email" name="email" value="email" placeholder="usuario"></div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-12 formpadding"><input type="password" style="width:80px;" [(ngModel)]="password" name="password" value="password" placeholder="clave"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 formpadding"><div (click)="loginemail()" class="butsup butlogin">Login</div></div>
+                <div class="col-sm-6 formpadding"></div>
+            </div>
+        </div>
